@@ -8,6 +8,7 @@ using namespace std;
 int game(int maxnum);
 
 int main() {
+
     // Call the game function with the maximum number
     int totalGuesses = game(40);
 
@@ -19,6 +20,7 @@ int main() {
 
 // Function definition
 int game(int maxnum) {
+
     // Initialize the random number generator
     srand(time(0));
 

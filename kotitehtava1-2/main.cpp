@@ -8,6 +8,7 @@ using namespace std;
 void guessingGame();
 
 int main() {
+
     // Call the guessingGame function
     guessingGame();
 
@@ -16,6 +17,7 @@ int main() {
 
 // Function definition for the guessing game
 void guessingGame() {
+
     // Initialize the random number generator
     srand(time(0));
 
@@ -28,6 +30,7 @@ void guessingGame() {
     cout << "Welcome to the guessing game! Guess the number between 1 and 20." << endl;
 
     do {
+
         cout << "Enter your guess: ";
         cin >> guess;
 
@@ -39,5 +42,6 @@ void guessingGame() {
         } else {
             cout << "Congratulations! You guessed it right." << endl;
         }
+
     } while (guess != targetNumber);
 }
