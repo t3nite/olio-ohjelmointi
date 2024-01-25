@@ -8,6 +8,8 @@ private:
     int playerGuess;
     int randomNumber;
     int numOfGuesses;
+    // Private method to print game result
+    void printGameResult() const;
 
 public:
     // Constructor
@@ -18,10 +20,6 @@ public:
 
     // Public method to play the game
     void play();
-
-private:
-    // Private method to print game result
-    void printGameResult() const;
 
 };
 

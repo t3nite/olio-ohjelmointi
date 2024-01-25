@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <limits>
+
 
 using namespace std;
 
@@ -20,12 +20,14 @@ Game::~Game() {
 
 // Public method definition to play the game
 void Game::play() {
+
     bool stayInLoop = true;
 
     while (stayInLoop) {
-        cout << "Give your guess between 1-" << maxNumber << endl;
 
         // Pyydä pelaajan arvausta vasta tässä vaiheessa
+        cout << "Give your guess between 1-" << maxNumber << endl;
+
         cin >> playerGuess;
 
         // Käsittele virheellinen syöte
@@ -35,10 +37,10 @@ void Game::play() {
             numOfGuesses++;
 
             if (playerGuess == randomNumber) {
-                cout << "Congratulations! You guessed it right." << endl;
+                cout << "You guessed the right answer" << endl;
                 stayInLoop = false;
             } else {
-                cout << (playerGuess < randomNumber ? "Your guess is too small." : "Your guess is too large.") << endl;
+                cout << (playerGuess < randomNumber ? "Your guess is too small.\n" : "Your guess is too big.\n") << endl;
             }
         }
 
@@ -51,6 +53,6 @@ void Game::play() {
 // Private method definition to print game result
 void Game::printGameResult() const {
     cout << "Game over! The correct number was: " << randomNumber << endl;
-    cout << "Total guesses: " << numOfGuesses << endl;
+    cout << "Total guesses: " << numOfGuesses <<endl;
 }
 
